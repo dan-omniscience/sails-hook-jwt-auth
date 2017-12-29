@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-jwt-auth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "json web token authentication system",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "https://github.com/saviogl/sails-hook-jwt-auth.git"
   },
   "dependencies": {
-    "jsonwebtoken": "^4.2.2",
+    "jsonwebtoken": "^5.0.0",
     "sails-util": "^0.10.4",
     "async": "^0.9.0",
     "lodash": "^3.6.0",
