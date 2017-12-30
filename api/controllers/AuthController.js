@@ -23,9 +23,9 @@ module.exports = {
         }});
       }
 
-      user.isPasswordValid( req.body.password, function (err, bool) {
+      User.isPasswordValid(user.password, req.body.password, function (err, valid) {
         if ( err ) return res.serverError(err);
-        if ( bool ) {
+        if ( valid ) {
           return res.json( { user: user, token: TokenAuth.issueToken({ sub: user.id }) } );
         } else {
           return res.json( 401, { err: {

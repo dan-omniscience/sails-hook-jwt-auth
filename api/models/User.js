@@ -10,7 +10,7 @@ module.exports = {
 
   attributes: {
   	email: {
-  		type: 'email',
+  		type: 'string',
   		required: true,
   		unique: true
   	},
@@ -23,11 +23,11 @@ module.exports = {
     active: {
       type: 'boolean',
       defaultsTo: true
-    },
-
-    isPasswordValid: function (password, cb) {
-      bcrypt.compare(password, this.password, cb);
     }
+  },
+  
+  isPasswordValid(hashedPassword, password, cb) {
+    bcrypt.compare(password, hashedPassword, cb);
   }
 };
 
